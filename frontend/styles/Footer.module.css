@@ -1,0 +1,121 @@
+.footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 2rem 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .footerSection {
+    flex: 1;
+    margin: 0 1rem;
+  }
+  
+  .footerSection h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footerSection ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerSection a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footerSection a:hover {
+    color: #007bff;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: #a0aec0;
+  }
+  
+  .contactItem svg {
+    margin-right: 0.75rem;
+    color: #007bff;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialIcons a {
+    color: #a0aec0;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .socialIcons a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+  }
+  
+  .footerBottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .footerBottom p {
+    margin-bottom: 0.5rem;
+    color: #a0aec0;
+  }
+  
+  .legalLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .legalLinks a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .legalLinks a:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footerContent {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footerSection {
+      margin: 1rem 0;
+    }
+  
+    .socialIcons {
+      justify-content: center;
+    }
+  
+    .contactItem {
+      justify-content: center;
+    }
+  }

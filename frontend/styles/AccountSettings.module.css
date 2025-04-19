@@ -1,0 +1,248 @@
+.accountSettingsContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .pageTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Section Styling */
+  .section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Elements */
+  .formRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .formGroup {
+    flex: 1;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+  }
+  
+  .input:focus {
+    border-color: #4f46e5;
+    outline: none;
+  }
+  
+  /* Buttons */
+  .saveButton, .updateButton, .addButton {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .updateButton {
+    background-color: #5046e5;
+  }
+  
+  .addButton {
+    background-color: #fff;
+    color: #4f46e5;
+    border: 1px solid #4f46e5;
+  }
+  
+  .saveButton:hover, .updateButton:hover {
+    background-color: #4338ca;
+  }
+  
+  .addButton:hover {
+    background-color: #f9fafb;
+  }
+  
+  .editButton, .removeButton {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .editButton {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .removeButton {
+    background-color: #fff;
+    color: #ef4444;
+    border: 1px solid #fca5a5;
+    margin-left: 8px;
+  }
+  
+  .editButton:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .removeButton:hover {
+    background-color: #fee2e2;
+  }
+  
+  /* Payment Methods */
+  .paymentMethods {
+    margin-bottom: 20px;
+  }
+  
+  .paymentMethod {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .paymentInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .paymentIcon {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+  
+  .paymentType {
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+  
+  .paymentDetails {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  /* Notifications */
+  .notificationItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .notificationItem:last-child {
+    border-bottom: none;
+  }
+  
+  .notificationInfo {
+    flex: 1;
+  }
+  
+  .notificationTitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .notificationDescription {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  /* Toggle Switch */
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e5e7eb;
+    transition: .4s;
+    border-radius: 24px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #4f46e5;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .formRow {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .paymentMethod {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .paymentActions {
+      margin-top: 12px;
+      align-self: flex-end;
+    }
+  }

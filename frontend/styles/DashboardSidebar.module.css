@@ -1,0 +1,318 @@
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .link {
+    display: block;
+    padding: 10px;
+    background-color: #d1d1d1;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  .link:hover {
+    background-color: #bdbdbd;
+  }
+  
+  .logout {
+    display: block;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .logout:hover {
+    background-color: darkred;
+  }
+  
+  /* Add this to your styles/Dashboard.module.css file */
+
+/* Account Dropdown */
+.accountWrapper {
+  position: relative;
+}
+
+.accountButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: var(--color-bg-accent);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.accountButton:hover {
+  background-color: var(--color-bg-accent-hover);
+}
+
+.accountDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdownUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.dropdownAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdownName {
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+
+.dropdownEmail {
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-size: 12px;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background-color: var(--color-border-light);
+  margin: 0;
+}
+
+.dropdownMenu {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  color: var(--color-danger);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: var(--color-bg-hover);
+}
+
+/* Notification Dropdown */
+.notificationWrapper {
+  position: relative;
+}
+
+.notificationButton {
+  position: relative;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.notificationButton:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.notificationBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-danger);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notificationsDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  max-height: 480px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.notificationsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.notificationsHeader h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.readAllButton {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.readAllButton:hover {
+  text-decoration: underline;
+}
+
+.notificationsList {
+  overflow-y: auto;
+  max-height: 360px;
+  padding: 0;
+  margin: 0;
+}
+
+.notificationItem {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border-light);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.notificationItem:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.notificationItem.read {
+  opacity: 0.7;
+  background-color: var(--color-bg-secondary);
+}
+
+.notificationIcon {
+  background-color: var(--color-primary-light);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.notificationContent {
+  flex: 1;
+}
+
+.notificationMessage {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.notificationTimestamp {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.noNotifications {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.notificationsFooter {
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-border-light);
+  text-align: center;
+}
+
+.viewAllLink {
+  font-size: 14px;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.viewAllLink:hover {
+  text-decoration: underline;
+}

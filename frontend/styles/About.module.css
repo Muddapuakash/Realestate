@@ -1,0 +1,17 @@
+.aboutContainer {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+  }
+  

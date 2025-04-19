@@ -1,0 +1,410 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.heroSection {
+  flex: 1;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heroContent {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mainHeading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+.mainHeading span {
+  color: #4a90e2;
+}
+
+.subHeading {
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.primaryCta, .secondaryCta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.primaryCta {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+}
+
+.primaryCta:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.secondaryCta {
+  background-color: transparent;
+  color: #4a90e2;
+  border: 2px solid #4a90e2;
+}
+
+.secondaryCta:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+  transform: translateY(-2px);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #4a90e2;
+  background: rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.featureCard p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 3rem 1.5rem;
+  }
+  
+  .mainHeading {
+    font-size: 2.5rem;
+  }
+  
+  .ctaContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .primaryCta, .secondaryCta {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainHeading {
+    font-size: 2rem;
+  }
+  
+  .subHeading {
+    font-size: 1rem;
+  }
+}
+
+/* Existing styles remain unchanged */
+
+/* Market Trends Section */
+.marketTrendsSection {
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0 0.5rem;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionHeader p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+.trendsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.trendCard {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.trendHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.trendHeader h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.trendDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trendStat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.trendIconUp {
+  color: #10b981;
+}
+
+.trendIconDown {
+  color: #ef4444;
+}
+
+.trendIconStable {
+  color: #f59e0b;
+}
+
+.rising {
+  color: #10b981;
+}
+
+.falling {
+  color: #ef4444;
+}
+
+.stable {
+  color: #f59e0b;
+}
+
+.loadingContainer, .errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.loadingIcon {
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.retryButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.retryButton:hover {
+  background-color: #2563eb;
+}
+
+.apiSourceInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.apiSourceInfo p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.viewMoreLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.viewMoreLink:hover {
+  color: #2563eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .apiSourceInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .trendsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Add these to your existing Home.module.css */
+
+.trendDetailsIndia {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trendDetailsIndia .trendStat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.marketInsightsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.marketInsightCard {
+  background-color: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marketInsightCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.marketInsightCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+  font-size: 1.2rem;
+}
+
+.marketInsightCard p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* RERA compliance badge */
+.reraCompliance {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ecfdf5;
+  color: #059669;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+}
+
+.reraCompliance svg {
+  margin-right: 0.25rem;
+}
+
+/* Responsive adjustments for Indian market data */
+@media (max-width: 768px) {
+  .marketInsightsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .trendDetailsIndia {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .trendDetailsIndia .trendStat {
+    flex-basis: 48%;
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "cities": [
+      {
+        "name": "Mumbai",
+        "hpi_2023": 250,
+        "base_price_2012": 5000000
+      },
+      {
+        "name": "Delhi",
+        "hpi_2023": 220,
+        "base_price_2012": 4500000
+      },
+      {
+        "name": "Bangalore",
+        "hpi_2023": 200,
+        "base_price_2012": 4000000
+      },
+      {
+        "name": "Hyderabad",
+        "hpi_2023": 180,
+        "base_price_2012": 3500000
+      },
+      {
+        "name": "Chennai",
+        "hpi_2023": 190,
+        "base_price_2012": 3800000
+      },
+      {
+        "name": "Pune",
+        "hpi_2023": 170,
+        "base_price_2012": 3200000
+      }
+    ]
+  }

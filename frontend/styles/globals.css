@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: darkblue;
+  }
+  
+button.primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300;
+}
+
+button.secondary {
+  @apply bg-gray-600 text-white hover:bg-gray-700 transition-all duration-300;
+}
+
+.navbar {
+    @apply bg-blue-600 text-white p-4 shadow-lg;
+  }
+  
+  .navbar ul {
+    @apply flex space-x-6;
+  }
+  
+  .navbar a {
+    @apply text-white hover:text-gray-200 transition-all duration-200;
+  }
+  
+  .footer {
+    @apply bg-gray-800 text-white text-center p-4 mt-10;
+  }
+  
+  .footer a {
+    @apply text-blue-400 hover:text-blue-300;
+  }
+  
+  .hero {
+    @apply text-center py-16 bg-cover bg-center;
+    background-image: url('/images/real-estate-bg.jpg'); /* Add an image in the public folder */
+  }
+  
+  .hero h1 {
+    @apply text-4xl font-bold text-white drop-shadow-lg;
+  }
+  
+  .hero p {
+    @apply text-lg text-white mt-2 drop-shadow;
+  }
+  
+  .hero button {
+    @apply mt-6 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-100 transition;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105;
+  }
+  
+  .card img {
+    @apply w-full h-48 object-cover;
+  }
+  
+  .card-content {
+    @apply p-4;
+  }
+  
+  .card h2 {
+    @apply text-xl font-semibold;
+  }
+  
+  .card p {
+    @apply text-gray-600;
+  }
+  
+  .card button {
+    @apply mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition;
+  }
+  
+  .searchbar {
+    @apply flex bg-white shadow-md rounded-lg overflow-hidden;
+  }
+  
+  .searchbar input {
+    @apply flex-grow p-3 text-gray-700 border-none focus:outline-none;
+  }
+  
+  .searchbar button {
+    @apply bg-blue-600 text-white px-4 hover:bg-blue-700 transition;
+  }
+  
+  .sidebar {
+    @apply bg-gray-800 text-white w-64 min-h-screen p-6;
+  }
+  
+  .sidebar ul {
+    @apply space-y-4;
+  }
+  
+  .sidebar a {
+    @apply block text-gray-300 hover:text-white transition;
+  }
+  

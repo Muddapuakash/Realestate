@@ -1,0 +1,131 @@
+2025-03-10 12:46:03,527 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.44.199:5000
+2025-03-10 12:46:03,528 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-10 12:46:03,535 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-10 12:46:04,283 - werkzeug - WARNING -  * Debugger is active!
+2025-03-10 12:46:04,288 - werkzeug - INFO -  * Debugger PIN: 101-988-262
+2025-03-10 12:46:20,881 - app - INFO - Model file model.pkl exists
+2025-03-10 12:46:20,882 - app - INFO - Preprocessor file preprocessor.pkl exists
+2025-03-10 12:46:20,883 - app - INFO - Received prediction request: {'area_type': 'Super built-up Area', 'location': 'Whitefield', 'size': '2 BHK', 'society': 'Goted U', 'total_sqft': '1200', 'bath': '2', 'balcony': '1'}
+2025-03-10 12:46:20,885 - app - ERROR - General prediction error: Error loading model: Ran out of input
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 35, in load_model
+    model = pickle.load(file)
+            ^^^^^^^^^^^^^^^^^
+EOFError: Ran out of input
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 142, in predict
+    model = load_model()
+            ^^^^^^^^^^^^
+  File "D:\Real_estate\backend\app.py", line 38, in load_model
+    raise Exception(f"Error loading model: {str(e)}")
+Exception: Error loading model: Ran out of input
+
+2025-03-10 12:46:20,886 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2025 12:46:20] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-03-10 12:46:21,646 - app - INFO - Received prediction request: {'area_type': 'Super built-up Area', 'location': 'Whitefield', 'size': '2 BHK', 'society': 'Goted U', 'total_sqft': '1200', 'bath': '2', 'balcony': '1'}
+2025-03-10 12:46:21,647 - app - ERROR - General prediction error: Error loading model: Ran out of input
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 35, in load_model
+    model = pickle.load(file)
+            ^^^^^^^^^^^^^^^^^
+EOFError: Ran out of input
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 142, in predict
+    model = load_model()
+            ^^^^^^^^^^^^
+  File "D:\Real_estate\backend\app.py", line 38, in load_model
+    raise Exception(f"Error loading model: {str(e)}")
+Exception: Error loading model: Ran out of input
+
+2025-03-10 12:46:21,647 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2025 12:46:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-03-10 12:46:21,830 - app - INFO - Received prediction request: {'area_type': 'Super built-up Area', 'location': 'Whitefield', 'size': '2 BHK', 'society': 'Goted U', 'total_sqft': '1200', 'bath': '2', 'balcony': '1'}
+2025-03-10 12:46:21,831 - app - ERROR - General prediction error: Error loading model: Ran out of input
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 35, in load_model
+    model = pickle.load(file)
+            ^^^^^^^^^^^^^^^^^
+EOFError: Ran out of input
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 142, in predict
+    model = load_model()
+            ^^^^^^^^^^^^
+  File "D:\Real_estate\backend\app.py", line 38, in load_model
+    raise Exception(f"Error loading model: {str(e)}")
+Exception: Error loading model: Ran out of input
+
+2025-03-10 12:46:21,832 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2025 12:46:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-03-10 12:46:22,138 - app - INFO - Received prediction request: {'area_type': 'Super built-up Area', 'location': 'Whitefield', 'size': '2 BHK', 'society': 'Goted U', 'total_sqft': '1200', 'bath': '2', 'balcony': '1'}
+2025-03-10 12:46:22,139 - app - ERROR - General prediction error: Error loading model: Ran out of input
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 35, in load_model
+    model = pickle.load(file)
+            ^^^^^^^^^^^^^^^^^
+EOFError: Ran out of input
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 142, in predict
+    model = load_model()
+            ^^^^^^^^^^^^
+  File "D:\Real_estate\backend\app.py", line 38, in load_model
+    raise Exception(f"Error loading model: {str(e)}")
+Exception: Error loading model: Ran out of input
+
+2025-03-10 12:46:22,139 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2025 12:46:22] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-03-10 12:46:22,548 - app - INFO - Received prediction request: {'area_type': 'Super built-up Area', 'location': 'Whitefield', 'size': '2 BHK', 'society': 'Goted U', 'total_sqft': '1200', 'bath': '2', 'balcony': '1'}
+2025-03-10 12:46:22,549 - app - ERROR - General prediction error: Error loading model: Ran out of input
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 35, in load_model
+    model = pickle.load(file)
+            ^^^^^^^^^^^^^^^^^
+EOFError: Ran out of input
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 142, in predict
+    model = load_model()
+            ^^^^^^^^^^^^
+  File "D:\Real_estate\backend\app.py", line 38, in load_model
+    raise Exception(f"Error loading model: {str(e)}")
+Exception: Error loading model: Ran out of input
+
+2025-03-10 12:46:22,550 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2025 12:46:22] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-03-10 12:47:15,714 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2025 12:47:15] "[33mGET /api/placeholder/150/150 HTTP/1.1[0m" 404 -
+2025-03-10 12:47:21,290 - app - INFO - Received prediction request: {'area_type': 'Super built-up Area', 'location': 'Whitefield', 'size': '2 BHK', 'society': 'Goted U', 'total_sqft': '1200', 'bath': '2', 'balcony': '1'}
+2025-03-10 12:47:21,292 - app - ERROR - General prediction error: Error loading model: Ran out of input
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 35, in load_model
+    model = pickle.load(file)
+            ^^^^^^^^^^^^^^^^^
+EOFError: Ran out of input
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Real_estate\backend\app.py", line 142, in predict
+    model = load_model()
+            ^^^^^^^^^^^^
+  File "D:\Real_estate\backend\app.py", line 38, in load_model
+    raise Exception(f"Error loading model: {str(e)}")
+Exception: Error loading model: Ran out of input
+
+2025-03-10 12:47:21,292 - werkzeug - INFO - 127.0.0.1 - - [10/Mar/2025 12:47:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-03-10 12:47:56,227 - werkzeug - INFO -  * Detected change in 'D:\\Real_estate\\backend\\app.py', reloading
+2025-03-10 12:47:56,228 - werkzeug - INFO -  * Detected change in 'D:\\Real_estate\\backend\\app.py', reloading
+2025-03-10 12:47:56,228 - werkzeug - INFO -  * Detected change in 'D:\\Real_estate\\backend\\app.py', reloading
+2025-03-10 12:47:56,477 - werkzeug - INFO -  * Detected change in 'D:\\Real_estate\\backend\\app.py', reloading
+2025-03-10 12:47:56,478 - werkzeug - INFO -  * Detected change in 'D:\\Real_estate\\backend\\app.py', reloading
+2025-03-10 12:47:56,686 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)

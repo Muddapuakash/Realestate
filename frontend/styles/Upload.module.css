@@ -1,0 +1,412 @@
+/* Upload.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e40af; /* blue-800 */
+}
+
+.dropArea {
+  border: 2px dashed #93c5fd; /* blue-300 */
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background-color: #eff6ff; /* blue-50 */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropArea:hover,
+.dropArea.drag-active {
+  border-color: #3b82f6; /* blue-500 */
+  background-color: #dbeafe; /* blue-100 */
+}
+
+.dropArea .icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  color: #3b82f6; /* blue-500 */
+}
+
+.dropArea .mainText {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.dropArea .subText {
+  font-size: 0.875rem;
+  color: #4b5563; /* gray-600 */
+  margin-bottom: 1rem;
+}
+
+.fileInput {
+  display: none;
+}
+
+.selectedFile {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #dbeafe; /* blue-100 */
+  border-radius: 0.375rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.selectedFile span {
+  max-width: 20rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selectedFile button {
+  margin-left: 0.5rem;
+  color: #ef4444; /* red-500 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectedFile button:hover {
+  color: #b91c1c; /* red-700 */
+}
+
+.previewArea {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 0.5rem;
+}
+
+.previewArea h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.previewFrame {
+  height: 16rem;
+  overflow: hidden;
+  background-color: #f3f4f6; /* gray-100 */
+  border-radius: 0.25rem;
+}
+
+.previewFrame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.hashDisplay {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f9fafb; /* gray-50 */
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb; /* gray-200 */
+}
+
+.hashDisplay .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.hashDisplay .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #2563eb; /* blue-600 */
+}
+
+.hashDisplay h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.hashDisplay code {
+  display: block;
+  padding: 0.5rem;
+  background-color: #f3f4f6; /* gray-100 */
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  overflow-x: auto;
+}
+
+.hashDisplay .description {
+  font-size: 0.75rem;
+  color: #4b5563; /* gray-600 */
+  margin-top: 0.5rem;
+}
+
+.uploadButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.button.primary {
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+}
+
+.button.primary:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+.button.disabled {
+  background-color: #d1d5db; /* gray-300 */
+  cursor: not-allowed;
+  color: white;
+}
+
+.button.loading {
+  background-color: #93c5fd; /* blue-300 */
+  cursor: wait;
+  color: white;
+}
+
+.button .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.progressContainer {
+  margin-bottom: 1.5rem;
+}
+
+.progressBar {
+  height: 0.5rem;
+  width: 100%;
+  background-color: #e5e7eb; /* gray-200 */
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.progressFill.inProgress {
+  background-color: #3b82f6; /* blue-500 */
+}
+
+.progressFill.complete {
+  background-color: #10b981; /* green-500 */
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #4b5563; /* gray-600 */
+  margin-top: 0.25rem;
+}
+
+.messageBox {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.messageBox.success {
+  background-color: #ecfdf5; /* green-50 */
+  color: #065f46; /* green-800 */
+  border: 1px solid #a7f3d0; /* green-200 */
+}
+
+.messageBox.error {
+  background-color: #fef2f2; /* red-50 */
+  color: #991b1b; /* red-800 */
+  border: 1px solid #fecaca; /* red-200 */
+}
+
+.messageBox.info {
+  background-color: #eff6ff; /* blue-50 */
+  color: #1e40af; /* blue-800 */
+  border: 1px solid #bfdbfe; /* blue-200 */
+}
+
+.messageBox .content {
+  display: flex;
+  align-items: center;
+}
+
+.messageBox .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.transactionHash {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #a7f3d0; /* green-200 */
+}
+
+.transactionHash p:first-child {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.transactionHash code {
+  display: block;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  overflow-x: auto;
+}
+
+.transactionHash .description {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.historySection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb; /* gray-200 */
+}
+
+.historySection h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.historyTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.historyTable th {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280; /* gray-500 */
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.historyTable th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.historyTable th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.historyTable td {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #e5e7eb; /* gray-200 */
+}
+
+.historyTable tr:last-child td {
+  border-bottom: none;
+}
+
+.historyTable td:first-child div {
+  max-width: 18rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dateColumn {
+  color: #6b7280; /* gray-500 */
+  white-space: nowrap;
+}
+
+.statusBadge {
+  display: inline-flex;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  border-radius: 9999px;
+  background-color: #d1fae5; /* green-100 */
+  color: #065f46; /* green-800 */
+}
+
+.infoBox {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #eff6ff; /* blue-50 */
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.infoBox h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.infoBox p {
+  margin-bottom: 0.5rem;
+}
+
+.infoBox ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.infoBox ul li {
+  margin-bottom: 0.25rem;
+  color: #4b5563; /* gray-600 */
+}
+
+/* Loading Spinner Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingSpinner {
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+  margin-left: -0.25rem;
+  height: 1rem;
+  width: 1rem;
+}
